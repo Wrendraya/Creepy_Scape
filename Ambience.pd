@@ -1,2 +1,6 @@
 #N canvas 378 170 727 596 12;
 #X text 80 54 Ambient patch;
+#X obj 145 157 metro 1000;
+#X obj 138 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 2 0 1 0;
