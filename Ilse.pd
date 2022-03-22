@@ -1,4 +1,145 @@
-#N canvas 0 25 450 300 12;
+#N canvas -20 0 1920 976 12;
 #X text 41 56 Ilse;
-#X obj 139 148 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 621 335 noise~;
+#X obj 449 408 readsf~;
+#X msg 377 401 1;
+#X obj 718 661 dac~ 1 2;
+#X obj 726 402 bob~;
+#X floatatom 940 305 5 0 0 0 - - - 0;
+#X obj 945 205 metro 300;
+#X obj 736 147 tgl 15 0 empty empty empty 0 -6 0 8 #dcdcdc #000000
 #000000 0 1;
+#X obj 953 252 Cyclone/drunk 4 0, f 24;
+#X obj 740 100 loadbang;
+#X obj 739 223 metro 3000;
+#X obj 739 271 line;
+#X floatatom 739 295 5 0 0 0 - - - 0;
+#X msg 739 247 1000 \, 1200 3000;
+#X obj 730 500 *~ 0.5;
+#X text 111 332 Crow needs a different sample size;
+#X obj 440 657 readsf~;
+#X msg 291 672 1;
+#X msg 379 626 open wolf_howl.wav;
+#X msg 448 366 open crow_caw2.wav;
+#X obj 574 504 *~ 2;
+#X obj 1101 593 readsf~;
+#X obj 1040 528 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 937 540 1;
+#X obj 1210 253 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X msg 1040 562 open rustling.wav;
+#X obj 1135 367 select 0 1 2;
+#X obj 1101 401 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1188 400 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1152 399 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1174 335 random 2;
+#X obj 1021 438 delay 1000;
+#X obj 1121 437 delay 3000;
+#X obj 1201 435 delay 5000;
+#X obj 1201 297 metro 10000;
+#X obj 278 149 select 0 1 2;
+#X obj 244 183 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 331 182 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 295 181 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 317 117 random 2;
+#X obj 164 220 delay 1000;
+#X obj 264 219 delay 3000;
+#X obj 344 217 delay 5000;
+#X obj 344 79 metro 10000;
+#X obj 369 28 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 422 318 t b b;
+#X obj 60 487 select 0 1 2;
+#X obj 143 534 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 230 533 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 194 532 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 99 455 random 2;
+#X obj 63 571 delay 1000;
+#X obj 163 570 delay 3000;
+#X obj 243 568 delay 5000;
+#X obj 126 417 metro 10000;
+#X obj 151 366 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 222 607 t b b;
+#X connect 1 0 5 0;
+#X connect 2 0 21 0;
+#X connect 3 0 2 0;
+#X connect 5 0 15 0;
+#X connect 6 0 5 2;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 8 0 11 0;
+#X connect 9 0 6 0;
+#X connect 10 0 8 0;
+#X connect 10 0 25 0;
+#X connect 10 0 45 0;
+#X connect 10 0 56 0;
+#X connect 11 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 5 1;
+#X connect 14 0 12 0;
+#X connect 15 0 4 1;
+#X connect 15 0 4 0;
+#X connect 17 0 4 0;
+#X connect 17 0 4 1;
+#X connect 18 0 17 0;
+#X connect 19 0 17 0;
+#X connect 20 0 2 0;
+#X connect 21 0 4 0;
+#X connect 21 0 4 1;
+#X connect 22 0 4 0;
+#X connect 22 0 4 1;
+#X connect 23 0 26 0;
+#X connect 23 0 24 0;
+#X connect 24 0 22 0;
+#X connect 25 0 35 0;
+#X connect 26 0 22 0;
+#X connect 27 0 28 0;
+#X connect 27 1 30 0;
+#X connect 27 2 29 0;
+#X connect 28 0 32 0;
+#X connect 29 0 34 0;
+#X connect 30 0 33 0;
+#X connect 31 0 27 0;
+#X connect 32 0 23 0;
+#X connect 33 0 23 0;
+#X connect 34 0 23 0;
+#X connect 35 0 31 0;
+#X connect 36 0 37 0;
+#X connect 36 1 39 0;
+#X connect 36 2 38 0;
+#X connect 37 0 41 0;
+#X connect 38 0 43 0;
+#X connect 39 0 42 0;
+#X connect 40 0 36 0;
+#X connect 41 0 46 0;
+#X connect 42 0 46 0;
+#X connect 43 0 46 0;
+#X connect 44 0 40 0;
+#X connect 45 0 44 0;
+#X connect 46 0 3 0;
+#X connect 46 1 20 0;
+#X connect 47 0 48 0;
+#X connect 47 1 50 0;
+#X connect 47 2 49 0;
+#X connect 48 0 52 0;
+#X connect 49 0 54 0;
+#X connect 50 0 53 0;
+#X connect 51 0 47 0;
+#X connect 52 0 57 0;
+#X connect 53 0 57 0;
+#X connect 54 0 57 0;
+#X connect 55 0 51 0;
+#X connect 56 0 55 0;
+#X connect 57 0 18 0;
+#X connect 57 1 19 0;
