@@ -28,6 +28,9 @@
 #X obj 707 495 *~ 0.1;
 #X msg 931 266 1;
 #X msg 734 249 400 \, 600 10000;
+#X text 952 421 Everything in this patch should be banged immediately
+by the first threshold. The sound files last a bit more than 2min.
+;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
 #X connect 4 0 22 0;
