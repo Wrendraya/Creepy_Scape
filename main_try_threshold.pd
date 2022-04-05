@@ -1,0 +1,42 @@
+#N canvas 30 113 1187 664 12;
+#X obj 389 168 adc~ 1 2;
+#X obj 389 209 env~;
+#X obj 454 468 readsf~;
+#X msg 391 423 1;
+#X obj 449 554 dac~ 1 2;
+#X obj 452 397 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 391 340 trigger b b;
+#X msg 491 229 70;
+#X msg 453 423 open crow_caw.wav;
+#X obj 391 285 One_time_threshold;
+#X obj 464 64 time;
+#X obj 464 38 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X floatatom 464 94 5 0 0 0 - - - 0;
+#X floatatom 532 180 5 0 0 0 - - - 0;
+#X floatatom 566 104 5 0 0 0 - - - 0;
+#X obj 532 212 sel 1;
+#X obj 532 242 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 532 149 >;
+#X text 669 227 threshold trigger by;
+#X connect 0 0 1 0;
+#X connect 1 0 9 0;
+#X connect 2 0 4 0;
+#X connect 2 0 4 1;
+#X connect 3 0 2 0;
+#X connect 5 0 8 0;
+#X connect 6 0 3 0;
+#X connect 6 1 5 0;
+#X connect 7 0 9 1;
+#X connect 8 0 2 0;
+#X connect 9 0 6 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 0;
+#X connect 14 0 17 1;
+#X connect 15 0 16 0;
+#X connect 16 0 9 2;
+#X connect 17 0 13 0;
