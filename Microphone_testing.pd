@@ -1,17 +1,18 @@
-#N canvas 128 128 1920 976 12;
+#N canvas -113 47 1920 976 12;
 #X obj 471 370 dac~ 1 2;
 #X obj 303 292 else/vu~;
-#X obj 594 408 vu 20 80 empty empty -1 -8 0 10 #000000 #000000 0 0
+#X obj 864 523 vu 20 80 empty empty -1 -8 0 10 #000000 #000000 0 0
 ;
 #X obj 598 344 else/vu~ 1024 128;
-#X obj 475 279 adc~ 3;
+#X obj 541 198 adc~ 3;
 #X obj 358 169 env~;
 #X floatatom 358 193 5 0 0 0 - - - 0;
-#X obj 475 303 *~ 10;
+#X obj 740 313 delay 100;
+#X text 1265 150 comment;
 #X connect 3 0 2 0;
 #X connect 3 1 2 1;
-#X connect 4 0 7 0;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
 #X connect 5 0 6 0;
-#X connect 7 0 3 0;
-#X connect 7 0 5 0;
-#X connect 7 0 0 0;
