@@ -24,27 +24,27 @@
 #X obj 904 552 readsf~, f 8;
 #X obj 914 426 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X msg 487 477 open Rustling2.wav;
 #X obj 707 495 *~ 0.1;
 #X msg 931 266 1;
 #X msg 734 249 400 \, 600 10000;
 #X text 952 421 Everything in this patch should be banged immediately
 by the first threshold. The sound files last a bit more than 2min.
 ;
+#X msg 487 477 open Rustling.wav;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
-#X connect 4 0 22 0;
+#X connect 4 0 21 0;
 #X connect 5 0 4 2;
 #X connect 6 0 10 0;
 #X connect 7 0 6 0;
-#X connect 7 0 23 0;
+#X connect 7 0 22 0;
 #X connect 7 0 20 0;
 #X connect 7 0 15 0;
 #X connect 8 0 9 0;
 #X connect 9 0 4 1;
-#X connect 10 0 24 0;
+#X connect 10 0 23 0;
 #X connect 12 0 14 0;
-#X connect 12 1 21 0;
+#X connect 12 1 25 0;
 #X connect 13 0 11 0;
 #X connect 13 0 11 1;
 #X connect 14 0 13 0;
@@ -56,8 +56,8 @@ by the first threshold. The sound files last a bit more than 2min.
 #X connect 19 0 11 0;
 #X connect 19 0 11 1;
 #X connect 20 0 17 0;
-#X connect 21 0 13 0;
-#X connect 22 0 11 0;
-#X connect 22 0 11 1;
-#X connect 23 0 5 0;
-#X connect 24 0 8 0;
+#X connect 21 0 11 0;
+#X connect 21 0 11 1;
+#X connect 22 0 5 0;
+#X connect 23 0 8 0;
+#X connect 25 0 13 0;
