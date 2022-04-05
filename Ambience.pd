@@ -1,6 +1,60 @@
-#N canvas 378 170 727 596 12;
+#N canvas 243 23 1920 976 12;
 #X text 80 54 Ambient patch;
 #X obj 145 157 metro 1000;
-#X obj 138 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 138 117 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 621 335 noise~;
+#X obj 726 402 bob~;
+#X floatatom 930 299 5 0 0 0 - - - 0;
+#X obj 736 147 tgl 15 0 empty empty empty 0 -6 0 8 #dcdcdc #000000
+#000000 0 1;
+#X obj 740 100 loadbang;
+#X obj 739 271 line;
+#X floatatom 739 295 5 0 0 0 - - - 0;
+#X obj 739 223 metro 10000;
+#X obj 697 635 dac~ 1 2;
+#X obj 463 423 t b b;
+#X obj 589 567 readsf~;
+#X msg 412 479 1;
+#X obj 465 371 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 962 504 open birds.wav;
+#X obj 917 466 t b b;
+#X msg 868 504 1;
+#X obj 904 552 readsf~, f 8;
+#X obj 914 426 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 487 477 open Rustling2.wav;
+#X obj 707 495 *~ 0.1;
+#X msg 931 266 1;
+#X msg 734 249 400 \, 600 10000;
 #X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 22 0;
+#X connect 5 0 4 2;
+#X connect 6 0 10 0;
+#X connect 7 0 6 0;
+#X connect 7 0 23 0;
+#X connect 7 0 20 0;
+#X connect 7 0 15 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 1;
+#X connect 10 0 24 0;
+#X connect 12 0 14 0;
+#X connect 12 1 21 0;
+#X connect 13 0 11 0;
+#X connect 13 0 11 1;
+#X connect 14 0 13 0;
+#X connect 15 0 12 0;
+#X connect 16 0 19 0;
+#X connect 17 0 18 0;
+#X connect 17 1 16 0;
+#X connect 18 0 19 0;
+#X connect 19 0 11 0;
+#X connect 19 0 11 1;
+#X connect 20 0 17 0;
+#X connect 21 0 13 0;
+#X connect 22 0 11 0;
+#X connect 22 0 11 1;
+#X connect 23 0 5 0;
+#X connect 24 0 8 0;
