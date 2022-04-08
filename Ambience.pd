@@ -1,4 +1,4 @@
-#N canvas 243 23 1920 976 12;
+#N canvas -161 -14 1920 976 12;
 #X text 80 54 Ambient patch;
 #X obj 145 157 metro 1000;
 #X obj 138 117 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -12,7 +12,7 @@
 #X obj 739 271 line;
 #X floatatom 739 295 5 0 0 0 - - - 0;
 #X obj 739 223 metro 10000;
-#X obj 697 635 dac~ 1 2;
+#X obj 682 799 dac~ 1 2;
 #X obj 463 423 t b b;
 #X obj 589 567 readsf~;
 #X msg 412 479 1;
@@ -31,6 +31,13 @@
 by the first threshold. The sound files last a bit more than 2min.
 ;
 #X msg 487 477 open Rustling.wav;
+#X obj 736 607 line;
+#X floatatom 711 634 5 0 0 0 - - - 0;
+#X obj 863 144 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 991 178 Gradual start;
+#X obj 684 711 *~;
+#X msg 882 176 -1 \, 15 10000, f 13;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
 #X connect 4 0 21 0;
@@ -40,24 +47,28 @@ by the first threshold. The sound files last a bit more than 2min.
 #X connect 7 0 22 0;
 #X connect 7 0 20 0;
 #X connect 7 0 15 0;
+#X connect 7 0 28 0;
 #X connect 8 0 9 0;
 #X connect 9 0 4 1;
 #X connect 10 0 23 0;
 #X connect 12 0 14 0;
 #X connect 12 1 25 0;
-#X connect 13 0 11 0;
-#X connect 13 0 11 1;
+#X connect 13 0 30 0;
 #X connect 14 0 13 0;
 #X connect 15 0 12 0;
 #X connect 16 0 19 0;
 #X connect 17 0 18 0;
 #X connect 17 1 16 0;
 #X connect 18 0 19 0;
-#X connect 19 0 11 0;
-#X connect 19 0 11 1;
+#X connect 19 0 30 0;
 #X connect 20 0 17 0;
-#X connect 21 0 11 0;
-#X connect 21 0 11 1;
+#X connect 21 0 30 0;
 #X connect 22 0 5 0;
 #X connect 23 0 8 0;
 #X connect 25 0 13 0;
+#X connect 26 0 27 0;
+#X connect 27 0 30 1;
+#X connect 28 0 31 0;
+#X connect 30 0 11 0;
+#X connect 30 0 11 1;
+#X connect 31 0 26 0;
