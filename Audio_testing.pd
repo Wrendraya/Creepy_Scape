@@ -1,11 +1,12 @@
-#N canvas 128 128 1920 976 12;
+#N canvas 0 25 1440 847 12;
 #X obj 306 170 adc~;
-#X obj 267 314 dac~ 1 2;
 #X obj 461 194 env~;
 #X floatatom 461 218 5 0 0 0 - - - 0;
-#X text 721 256 First one \, above 50/60 Regular talking: 50- 70 Louder:
+#X text 721 133 First one \, above 50/60 Regular talking: 50- 70 Louder:
 70+ 80+;
-#X connect 0 0 1 0;
-#X connect 0 0 1 1;
-#X connect 0 0 2 0;
-#X connect 2 0 3 0;
+#X obj 444 349 phasor~ 1;
+#X obj 430 393 *~ 0.1;
+#X obj 410 536 dac~ 1 2 3 4;
+#X connect 1 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
