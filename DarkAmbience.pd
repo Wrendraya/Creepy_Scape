@@ -134,6 +134,7 @@ and one that craws twice a bit softer.;
 #X connect 36 0 1 0;
 #X connect 36 0 11 0;
 #X connect 36 0 48 1;
+#X connect 36 0 17 0;
 #X connect 37 0 38 0;
 #X connect 38 0 42 0;
 #X connect 39 0 31 0;
