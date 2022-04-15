@@ -1,0 +1,136 @@
+#N canvas -274 33 1920 976 12;
+#X obj 600 501 noise~;
+#X obj 750 566 bob~;
+#X obj 763 435 line;
+#X floatatom 763 459 5 0 0 0 - - - 0;
+#X obj 759 367 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 754 867 dac~ 1 2;
+#X msg 758 413 400 \, 1200 10000;
+#X obj 350 617 t b b;
+#X obj 476 761 readsf~;
+#X msg 299 673 1;
+#X obj 352 565 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 374 671 open Rustling.wav;
+#X obj 903 448 line;
+#X floatatom 903 472 5 0 0 0 - - - 0;
+#X obj 734 630 *~ 0.2;
+#X obj 937 373 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 551 819 *~ 1;
+#X msg 1757 167 open birds.wav;
+#X obj 1719 126 t b b;
+#X msg 1670 164 1;
+#X obj 1706 212 readsf~, f 8;
+#X obj 1716 86 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1830 258 line;
+#X floatatom 1830 283 5 0 0 0 - - - 0;
+#X obj 1752 252 *~;
+#X text 749 657 Sound of wind gets a bit louder over time;
+#X text 1434 38 Sound of the birds slowly leaves (in 7sec at the moment)
+;
+#X text 157 614 Rustling sound just stays;
+#X text 32 29 My idea for the transition would be to go from the lowness
+of the nice forest wind to the highness of the scary forest wind (from
+400 to 1200). The rustling leaves stay the same \, although they are
+louder in the dark ambience one --> line for making it louder is an
+option. The birds stop whistling after a certain amount of time (now
+7MS). After this patch time (now 10000 MS but we can edit it) we can
+go to the regular forest which would mean crows are added to the environment.
+;
+#X obj 1391 371 adc~ 1 2;
+#X obj 1391 412 env~;
+#X msg 1493 432 70;
+#X obj 1393 488 One_time_threshold;
+#X obj 1485 289 time;
+#X obj 1485 263 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 1485 319 5 0 0 0 - - - 0;
+#X floatatom 1534 383 5 0 0 0 - - - 0;
+#X obj 1534 415 sel 1;
+#X obj 1534 352 > 10;
+#X obj 1403 535 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 1278 409 5 0 0 0 - - - 0;
+#X obj 1597 570 spigot;
+#X obj 1646 528 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X msg 1639 473 1;
+#X obj 1580 607 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 1690 597 0;
+#X obj 827 130 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 736 46 INLET. Gets banged from ambience;
+#X obj 817 77 inlet;
+#X obj 1412 665 DarkAmbience;
+#X msg 1766 112 2 \, 0 7000;
+#X obj 1067 526 line;
+#X floatatom 1067 550 5 0 0 0 - - - 0;
+#X msg 1067 502 0.1 \, 0 3000;
+#X msg 895 426 0 \, 0.1 3000;
+#X text 964 403 Fade in;
+#X text 1081 472 Fade out;
+#X connect 0 0 1 0;
+#X connect 1 0 14 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 1;
+#X connect 4 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 9 0;
+#X connect 7 1 11 0;
+#X connect 8 0 16 0;
+#X connect 9 0 8 0;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 1;
+#X connect 13 0 16 1;
+#X connect 14 0 5 0;
+#X connect 14 0 5 1;
+#X connect 15 0 54 0;
+#X connect 16 0 5 0;
+#X connect 16 0 5 1;
+#X connect 17 0 20 0;
+#X connect 18 0 19 0;
+#X connect 18 1 17 0;
+#X connect 19 0 20 0;
+#X connect 20 0 24 0;
+#X connect 21 0 18 0;
+#X connect 21 0 50 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 1;
+#X connect 29 0 30 0;
+#X connect 30 0 32 0;
+#X connect 30 0 40 0;
+#X connect 31 0 32 2;
+#X connect 32 0 39 0;
+#X connect 33 0 35 0;
+#X connect 34 0 33 0;
+#X connect 35 0 38 0;
+#X connect 36 0 37 0;
+#X connect 37 0 41 0;
+#X connect 38 0 36 0;
+#X connect 39 0 53 0;
+#X connect 39 0 49 0;
+#X connect 41 0 44 0;
+#X connect 42 0 41 1;
+#X connect 43 0 42 0;
+#X connect 44 0 45 0;
+#X connect 44 0 32 1;
+#X connect 45 0 42 0;
+#X connect 46 0 4 0;
+#X connect 46 0 15 0;
+#X connect 46 0 10 0;
+#X connect 46 0 34 0;
+#X connect 46 0 31 0;
+#X connect 46 0 43 0;
+#X connect 48 0 46 0;
+#X connect 50 0 22 0;
+#X connect 51 0 52 0;
+#X connect 52 0 14 1;
+#X connect 52 0 16 1;
+#X connect 53 0 51 0;
+#X connect 54 0 12 0;
