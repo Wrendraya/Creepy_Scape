@@ -1,4 +1,4 @@
-#N canvas 0 25 1440 847 12;
+#N canvas -1907 -83 1859 986 12;
 #X obj 713 307 noise~;
 #X obj 583 592 readsf~;
 #X msg 257 421 1;
