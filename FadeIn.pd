@@ -1,0 +1,10 @@
+#N canvas -1391 150 503 377 12;
+#X obj 155 52 loadbang;
+#X obj 167 120 line, f 14;
+#X floatatom 168 156 6 0 0 0 - - - 0;
+#X msg 156 86 0 \, 0.1 3000;
+#X obj 168 203 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
