@@ -1,0 +1,63 @@
+#N canvas 236 132 757 544 12;
+#X obj 345 399 dac~ 1 2;
+#X msg 246 149 open breathing.wav;
+#X obj 185 177 readsf~;
+#X msg 185 151 1;
+#X obj 185 126 t b b;
+#X obj 185 92 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 240 201 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 206 104 play;
+#X obj 240 223 spigot;
+#X obj 279 199 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 468 116 readsf~;
+#X msg 468 90 1;
+#X obj 468 65 t b b;
+#X obj 468 45 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 523 140 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 489 43 play;
+#X obj 523 162 spigot;
+#X obj 562 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X msg 541 88 open running.wav;
+#X obj 424 327 line, f 12;
+#X obj 602 173 delay 10000;
+#X obj 603 145 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 469 229 *~ 1;
+#X obj 356 339 *~ 0.5;
+#X msg 437 296 0 \, 1 3000;
+#X obj 474 259 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X connect 1 0 2 0;
+#X connect 2 0 23 0;
+#X connect 2 1 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 1 1 0;
+#X connect 5 0 4 0;
+#X connect 5 0 25 0;
+#X connect 6 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 8 1;
+#X connect 10 1 14 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 12 1 18 0;
+#X connect 13 0 12 0;
+#X connect 13 0 21 0;
+#X connect 14 0 16 0;
+#X connect 16 0 13 0;
+#X connect 17 0 16 1;
+#X connect 18 0 10 0;
+#X connect 19 0 23 1;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 0 0;
+#X connect 23 0 0 1;
+#X connect 24 0 19 0;
+#X connect 25 0 24 0;
