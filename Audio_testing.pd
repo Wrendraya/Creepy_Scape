@@ -4,14 +4,9 @@
 70+ 80+;
 #X obj 444 349 phasor~ 1;
 #X obj 430 393 *~ 0.1;
-#X obj 410 536 dac~ 1 2 3 4;
 #X obj 264 391 dac~ 1 2;
 #X obj 270 184 adc~ 3;
 #X floatatom 363 315 5 0 0 0 - - - 0;
-#X connect 0 0 7 0;
+#X connect 0 0 6 0;
 #X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 3 0 4 1;
-#X connect 3 0 4 3;
-#X connect 3 0 4 2;
-#X connect 6 0 0 0;
+#X connect 5 0 0 0;
