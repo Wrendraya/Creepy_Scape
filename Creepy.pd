@@ -1,7 +1,7 @@
-#N canvas 390 118 1296 847 12;
-#X obj 712 237 osc~ 100;
-#X obj 800 236 osc~ 50;
-#X obj 613 236 osc~ 150;
+#N canvas 390 118 1920 976 12;
+#X obj 512 233 osc~ 100;
+#X obj 600 232 osc~ 50;
+#X obj 413 232 osc~ 150;
 #X obj 51 127 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 43 68 inlet;
@@ -14,14 +14,14 @@
 #X floatatom 146 430 5 0 0 0 - - - 0;
 #X obj 49 274 sin;
 #X msg 55 215 0 \, 6.28319 5000;
-#X obj 648 612 outlet~;
+#X obj 448 608 outlet~;
 #X obj 218 85 loadbang;
 #X obj 38 325 + 1.5;
-#X obj 901 76 inlet;
-#X obj 907 114 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 701 72 inlet;
+#X obj 707 110 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 901 170 line;
-#X msg 913 140 0.1 \, 0 3000;
+#X obj 701 166 line;
+#X msg 713 136 0.1 \, 0 3000;
 #X msg 289 407 0;
 #X obj 201 476 spigot;
 #X obj 303 465 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -29,16 +29,29 @@
 #X msg 342 406 1;
 #X text -178 522 Change the divided by value to make the difference
 bigger or smaller;
-#X obj 518 238 osc~ 170;
-#X obj 875 236 osc~ 30;
-#X obj 607 77 inlet;
-#X obj 608 116 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 318 234 osc~ 170;
+#X obj 675 232 osc~ 30;
+#X obj 407 73 inlet;
+#X obj 408 112 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 608 179 line;
+#X obj 408 175 line;
 #X msg 219 135 0;
-#X msg 608 155 0 \, 0.1 3000;
-#X obj 651 528 *~ 0.01;
+#X msg 408 151 0 \, 0.1 3000;
+#X obj 451 524 *~ 0.01;
 #X obj 41 358 / 12;
+#X obj 947 276 metro 3000;
+#X obj 894 569 ramp2;
+#X msg 928 449 800 400 0.5 400;
+#X obj 825 676 *~;
+#X obj 820 738 dac~ 1 2;
+#X obj 822 473 mtof;
+#X obj 914 326 random 3;
+#X floatatom 914 350 5 0 0 0 - - - 0;
+#X obj 958 232 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 814 565 osc~ 100;
+#X obj 919 297 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X connect 0 0 31 0;
 #X connect 1 0 31 0;
 #X connect 2 0 31 0;
@@ -73,3 +86,15 @@ bigger or smaller;
 #X connect 30 0 28 0;
 #X connect 31 0 12 0;
 #X connect 32 0 9 0;
+#X connect 33 0 43 0;
+#X connect 34 0 36 0;
+#X connect 35 0 34 0;
+#X connect 36 0 37 0;
+#X connect 36 0 37 1;
+#X connect 38 0 42 0;
+#X connect 38 0 35 0;
+#X connect 39 0 40 0;
+#X connect 40 0 38 0;
+#X connect 41 0 33 0;
+#X connect 42 0 36 0;
+#X connect 43 0 39 0;
