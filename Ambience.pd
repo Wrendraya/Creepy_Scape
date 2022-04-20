@@ -37,7 +37,7 @@ by the first threshold. The sound files last a bit more than 2min.
 #X obj 902 557 Noise_transition;
 #X obj 147 183 line;
 #X floatatom 147 207 4 0 0 0 - - - 0;
-#X obj 1414 830 4ch_output_section;
+#X obj 1334 660 4ch_output_section;
 #X obj 1195 714 rev3~ 100 90 3000 20;
 #X obj 1332 750 throw~ speaker3;
 #X obj 1286 777 throw~ speaker2;
