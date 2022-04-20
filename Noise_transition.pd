@@ -1,4 +1,4 @@
-#N canvas 15 25 1440 847 12;
+#N canvas 0 25 1440 847 12;
 #X obj 385 450 bob~;
 #X obj 398 378 line;
 #X floatatom 398 402 5 0 0 0 - - - 0;
@@ -31,7 +31,7 @@ go to the regular forest which would mean crows are added to the environment.
 #X floatatom 1165 270 5 0 0 0 - - - 0;
 #X obj 1145 552 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X floatatom 972 459 5 0 0 0 - - - 0;
+#X floatatom 1012 468 5 0 0 0 - - - 0;
 #X obj 798 104 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X text 707 20 INLET. Gets banged from ambience;
@@ -67,7 +67,6 @@ go to the regular forest which would mean crows are added to the environment.
 #X obj 1191 410 delay 10000;
 #X obj 148 474 *~ 0.08;
 #X obj 382 256 noise~;
-#X obj 974 518 > 50;
 #X connect 0 0 48 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 1;
@@ -87,13 +86,12 @@ go to the regular forest which would mean crows are added to the environment.
 #X connect 13 0 32 1;
 #X connect 13 0 32 2;
 #X connect 13 0 32 3;
-#X connect 16 0 21 0;
 #X connect 16 0 50 0;
+#X connect 16 0 21 0;
 #X connect 17 0 50 2;
 #X connect 18 0 19 0;
 #X connect 20 0 28 0;
 #X connect 20 0 25 0;
-#X connect 21 0 54 0;
 #X connect 22 0 3 0;
 #X connect 22 0 12 0;
 #X connect 22 0 8 0;

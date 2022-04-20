@@ -1,4 +1,4 @@
-#N canvas 0 25 1920 976 12;
+#N canvas 0 25 1440 847 12;
 #X obj 77 19 inlet;
 #X obj 78 54 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -131,7 +131,10 @@ reached;
 #X obj 1270 205 delay 15000;
 #X text 1588 704 Remove this if end object works;
 #X obj 1437 548 end;
-#X obj 1435 614 dac~ 1 2 3 4;
+#X obj 1435 640 dac~ 1 2 3 4;
+#X obj 1583 509 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 1545 567 *~ 0.5;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 0 15 0;
@@ -267,7 +270,9 @@ reached;
 #X connect 106 0 71 0;
 #X connect 107 0 9 0;
 #X connect 108 0 100 0;
-#X connect 110 0 111 0;
-#X connect 110 0 111 1;
-#X connect 110 0 111 2;
-#X connect 110 0 111 3;
+#X connect 110 0 113 0;
+#X connect 112 0 113 1;
+#X connect 113 0 111 0;
+#X connect 113 0 111 3;
+#X connect 113 0 111 1;
+#X connect 113 0 111 2;
