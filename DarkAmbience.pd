@@ -1,4 +1,4 @@
-#N canvas 0 25 1440 847 12;
+#N canvas 0 25 1920 976 12;
 #X obj 373 591 readsf~;
 #X msg 44 428 1;
 #X msg 338 479 open crow_caw2.wav;
@@ -123,8 +123,8 @@
 #X obj 363 622 *~ 0.5;
 #X obj 1670 437 delay_threshold;
 #X obj 1665 287 adc~ 3;
-#X obj 1171 117 time;
-#X floatatom 1246 147 5 0 0 0 - - - 0;
+#X obj 1160 114 time;
+#X floatatom 1208 141 5 0 0 0 - - - 0;
 #X obj 1514 50 delay 20000;
 #X obj 1524 268 throw~ to_reverb;
 #X obj 1277 316 creepy2;
@@ -136,6 +136,13 @@
 #X obj 203 900 dac~ 3 4;
 #X obj 1175 346 *~ 0.03;
 #X obj 1277 340 *~ 0.03;
+#X msg 1279 125 1;
+#X obj 1301 153 readsf~;
+#X obj 1305 92 t b b;
+#X obj 1282 213 dac~ 1 2 3 4;
+#X obj 1215 59 delay 8000;
+#X msg 1331 126 open Ghost.wav;
+#X obj 1301 177 *~ 0.2;
 #X connect 0 0 105 0;
 #X connect 1 0 19 0;
 #X connect 2 0 0 0;
@@ -174,6 +181,7 @@
 #X connect 23 0 110 0;
 #X connect 23 0 44 1;
 #X connect 23 0 112 0;
+#X connect 23 0 125 0;
 #X connect 24 0 23 0;
 #X connect 25 0 28 0;
 #X connect 25 0 106 0;
@@ -277,3 +285,13 @@
 #X connect 117 0 88 0;
 #X connect 119 0 113 0;
 #X connect 120 0 113 0;
+#X connect 121 0 122 0;
+#X connect 122 0 127 0;
+#X connect 123 0 121 0;
+#X connect 123 1 126 0;
+#X connect 125 0 123 0;
+#X connect 126 0 122 0;
+#X connect 127 0 124 0;
+#X connect 127 0 124 1;
+#X connect 127 0 124 2;
+#X connect 127 0 124 3;
