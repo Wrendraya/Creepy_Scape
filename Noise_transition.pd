@@ -15,7 +15,7 @@
 #X floatatom 538 415 5 0 0 0 - - - 0;
 #X obj 572 316 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 264 620 *~ 1;
+#X obj 260 636 *~ 1;
 #X text 192 212 Rustling sound just stays;
 #X text 32 29 My idea for the transition would be to go from the lowness
 of the nice forest wind to the highness of the scary forest wind (from
@@ -25,25 +25,25 @@ option. The birds stop whistling after a certain amount of time (now
 7MS). After this patch time (now 10000 MS but we can edit it) we can
 go to the regular forest which would mean crows are added to the environment.
 ;
-#X obj 1143 448 env~;
-#X msg 1244 476 70;
-#X obj 1165 240 time;
-#X floatatom 1165 270 5 0 0 0 - - - 0;
-#X obj 1145 552 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 866 458 env~;
+#X msg 967 486 70;
+#X obj 839 77 time;
+#X floatatom 839 107 5 0 0 0 - - - 0;
+#X obj 868 562 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X floatatom 1012 468 5 0 0 0 - - - 0;
+#X floatatom 735 478 5 0 0 0 - - - 0;
 #X obj 798 104 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X text 707 20 INLET. Gets banged from ambience;
 #X obj 788 51 inlet;
-#X obj 1146 592 DarkAmbience;
+#X obj 869 602 DarkAmbience;
 #X obj 702 420 line;
 #X floatatom 702 444 5 0 0 0 - - - 0;
 #X msg 702 396 0.1 \, 0 3000;
 #X msg 530 369 0 \, 0.1 3000;
 #X text 599 346 Fade in;
 #X text 716 366 Fade out;
-#X obj 243 697 dac~ 1 2 3 4;
+#X obj 206 739 dac~ 1 2 3 4;
 #X obj 377 706 else/pan2~;
 #X obj 489 739 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
@@ -62,11 +62,38 @@ go to the regular forest which would mean crows are added to the environment.
 #X obj 638 540 metro 6000;
 #X obj 377 805 dac~ 2 4;
 #X obj 375 657 *~ 0.09;
-#X obj 1141 348 adc~ 3;
-#X obj 1143 507 delay_threshold;
-#X obj 1191 410 delay 10000;
+#X obj 864 358 adc~ 3;
+#X obj 866 517 delay_threshold;
+#X obj 914 420 delay 10000;
 #X obj 148 474 *~ 0.08;
 #X obj 382 256 noise~;
+#X obj 1042 502 readsf~;
+#X msg 1042 476 1;
+#X obj 1042 451 t b b;
+#X obj 1097 526 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1109 548 spigot;
+#X obj 1159 523 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1065 135 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 1124 474 open Scary_animal.wav;
+#X obj 1041 578 *~ 0.02;
+#X obj 1034 706 dac~ 1 2 3 4;
+#X obj 1177 412 readsf~;
+#X msg 1177 386 1;
+#X obj 1177 361 t b b;
+#X obj 1245 410 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1257 432 spigot;
+#X obj 1307 407 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1177 177 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 1272 358 open Scary_animal.wav;
+#X obj 1186 587 *~ 0.02;
+#X obj 1173 145 delay 5000;
+#X obj 1061 103 delay 4000;
 #X connect 0 0 48 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 1;
@@ -99,6 +126,8 @@ go to the regular forest which would mean crows are added to the environment.
 #X connect 22 0 40 0;
 #X connect 22 0 51 0;
 #X connect 22 0 18 0;
+#X connect 22 0 74 0;
+#X connect 22 0 73 0;
 #X connect 24 0 22 0;
 #X connect 26 0 27 0;
 #X connect 27 0 13 1;
@@ -128,3 +157,31 @@ go to the regular forest which would mean crows are added to the environment.
 #X connect 51 0 50 1;
 #X connect 52 0 13 0;
 #X connect 53 0 0 0;
+#X connect 54 0 62 0;
+#X connect 54 1 57 0;
+#X connect 55 0 54 0;
+#X connect 56 0 55 0;
+#X connect 56 1 61 0;
+#X connect 57 0 58 0;
+#X connect 59 0 58 1;
+#X connect 60 0 56 0;
+#X connect 61 0 54 0;
+#X connect 62 0 63 0;
+#X connect 62 0 63 1;
+#X connect 62 0 63 2;
+#X connect 62 0 63 3;
+#X connect 64 0 72 0;
+#X connect 64 1 67 0;
+#X connect 65 0 64 0;
+#X connect 66 0 65 0;
+#X connect 66 1 71 0;
+#X connect 67 0 68 0;
+#X connect 69 0 68 1;
+#X connect 70 0 66 0;
+#X connect 71 0 64 0;
+#X connect 72 0 63 0;
+#X connect 72 0 63 3;
+#X connect 72 0 63 1;
+#X connect 72 0 63 2;
+#X connect 73 0 70 0;
+#X connect 74 0 60 0;
