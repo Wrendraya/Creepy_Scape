@@ -71,12 +71,12 @@ by the first threshold. The sound files last a bit more than 2min.
 #X obj 1193 326 *~ 0.3;
 #X obj 434 610 *~ 0.03;
 #X obj 129 600 *~ 0.02;
-#X obj 894 324 adc~ 3;
 #X msg 145 125 0.02 \, 0 3000;
 #X obj 899 515 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 898 477 delay_threshold;
 #X obj 944 406 delay 20000;
+#X obj 894 324 adc~ 3;
 #X connect 1 0 2 0;
 #X connect 2 0 63 0;
 #X connect 3 0 2 2;
@@ -90,7 +90,7 @@ by the first threshold. The sound files last a bit more than 2min.
 #X connect 5 0 44 0;
 #X connect 5 0 61 0;
 #X connect 5 0 56 0;
-#X connect 5 0 69 0;
+#X connect 5 0 68 0;
 #X connect 6 0 7 0;
 #X connect 7 0 2 1;
 #X connect 8 0 14 0;
@@ -111,8 +111,8 @@ by the first threshold. The sound files last a bit more than 2min.
 #X connect 21 0 60 3;
 #X connect 22 0 17 0;
 #X connect 23 0 28 0;
-#X connect 23 0 68 0;
-#X connect 24 0 68 2;
+#X connect 23 0 67 0;
+#X connect 24 0 67 2;
 #X connect 25 0 27 0;
 #X connect 26 0 25 0;
 #X connect 30 0 31 0;
@@ -147,9 +147,9 @@ by the first threshold. The sound files last a bit more than 2min.
 #X connect 62 0 51 0;
 #X connect 63 0 21 0;
 #X connect 64 0 21 0;
-#X connect 65 0 23 0;
-#X connect 66 0 30 0;
-#X connect 67 0 29 0;
+#X connect 65 0 30 0;
+#X connect 66 0 29 0;
+#X connect 66 0 65 0;
 #X connect 67 0 66 0;
-#X connect 68 0 67 0;
-#X connect 69 0 68 1;
+#X connect 68 0 67 1;
+#X connect 69 0 23 0;
